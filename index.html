@@ -1,34 +1,79 @@
+<!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-    background: lightgreen;
-    font-family: Verdana;
-}  
-#content {
-    background: lightyellow;
-    min-width: 200px;
-    max-width: 500px;
-    padding: 50px;
-    margin: auto;
-    margin-top: -50px;
-    line-height: 150%;
-}
-h1 {
-    letter-spacing: 2px;
-    font-size: 16px;
-    text-align: center;
-}
-h2 {
-    font-size: 14px;
-    text-align: center;
-}
-h3 {
-    font-size: 12px;
-}
-</style>
-</head>    
+    <style>
+        body {
+            background-image: url('https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Verdana;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: auto;
+            color: white; /* Set text color to white */
+        }
+        
+        #overlay {
+            background-color: rgba(0, 0, 0, 0.6); /* Change the last value to adjust the opacity of the overlay */
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #content {
+           /* background-color: rgba(0, 0, 255, 0.2); /* Blue color with 60% opacity */
+            min-width: 200px;
+            max-width: 500px;
+            padding: 50px;
+            margin: auto;
+            margin-top: 50px; /* Adjusted from -50px to accommodate overlay */
+            line-height: 150%;
+            position: relative;
+            z-index: 1; /* Ensure content appears above overlay */
+        }
+        
+        h1 {
+            letter-spacing: 2px;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 14px;
+            text-align: center;
+        }
+        
+        h3 {
+            font-size: 12px;
+        }
+
+        /* Resize the image */
+        #content img {
+            max-width: 100px; /* Set maximum width for the image */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Ensure proper spacing */
+            margin: auto; /* Center the image */
+        }
+
+        /* Change link color */
+        a:link,
+        a:visited {
+            color: white; /* Set link color to white */
+            text-decoration: none; /* Remove underline */
+        }
+
+        a:hover,
+        a:active {
+            color: green; /* Change link color to green on hover and active */
+        }
+    </style>
+</head>
 <body>
+    <div id="overlay"></div> <!-- Overlay -->
     <div id="content">
         <h1>Abishai Cherian</h1>
         <h2>Freshman in Greenville, South Carolina</h2>
@@ -43,10 +88,10 @@ h3 {
             I enjoy listening to and playing music as well as pretty much any sport!
          </p>
         <h3>EDUCATION</h3>
-        Computer Science<br />
-        Bob Jones University<br />
-        Example image:
-        <img src="https://cdn.cookielaw.org/logos/bdc710c8-d16b-40be-b4a4-a5fa08ad89d2/b0dd47bb-a33e-4889-88e5-faefaa99d125/05a72597-cae6-4462-8c59-233c16238b70/bju-logo.png" />
+        <p>Business Finance with a double major in Ministry and Leadership<br />
+        Bob Jones University</p>
+        <p>Example image:</p>
+        <img src="https://onlinelearning-bju-edu.cdn.technolutions.net/images/scope-logo-footer.png" />
     </div>
 </body>
 </html>
